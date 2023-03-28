@@ -1,0 +1,133 @@
+
+
+# In[2]:
+
+
+# ans 1
+# A for loop is generally used when we want to iterate over a known range or sequence of values. It is useful when we know in
+# advance the exact number of times we want to loop through a block of code.for i in range(1, 11):
+for i in range(1,11):
+    print(i)
+
+
+# On the other hand, a while loop is generally used when we want to loop until a certain condition is met. It is useful when
+# we do not know in advance the exact number of times we want to loop through a block of code, but we do know the condition that
+# should cause the loop to terminate.
+password = "mypassword"
+guess = ""
+while guess != password:
+    guess = input("Enter your password: ")
+print("Access granted!")
+
+
+
+# In[4]:
+
+
+# ans 2
+# python program to print sum and product of first 10 natural no.
+# Using for loop
+sum = 0
+product = 1
+
+for i in range(1, 11):
+    sum += i
+    product *= i
+
+print("Sum of first 10 natural numbers:", sum)
+print("Product of first 10 natural numbers:", product)
+
+# Using while loop
+sum = 0
+product = 1
+i = 1
+
+while i <= 10:
+    sum += i
+    product *= i
+    i += 1
+
+print("Sum of first 10 natural numbers:", sum)
+print("Product of first 10 natural numbers:", product)
+
+
+
+# In[7]:
+
+
+# ans 3
+# get the number of units consumed from the user
+units = int(input("Enter the number of units consumed: "))
+
+# calculate the electricity bill based on the per-unit charges
+if units <= 100:
+    bill = units * 4.5
+elif units <= 200:
+    bill = 100 * 4.5 + (units - 100) * 6
+elif units <= 300:
+    bill = 100 * 4.5 + 100 * 6 + (units - 200) * 10
+else:
+    bill = 100 * 4.5 + 100 * 6 + 100 * 10 + (units - 300) * 20
+
+# display the electricity bill to the user
+print("Your electricity bill is: Rs.", bill)
+
+
+# In[8]:
+
+
+# ans 4
+# create a list of numbers from 1 to 100
+numbers = list(range(1, 101))
+
+# initialize an empty list to store the cubes of numbers
+cubes = []
+
+# calculate the cubes of each number using a for loop
+for num in numbers:
+    cube = num ** 3
+    if cube % 4 == 0 or cube % 5 == 0:
+        cubes.append(num)
+
+print("Numbers whose cubes are divisible by 4 or 5 using a for loop:", cubes)
+
+# reset the cubes list to empty
+cubes = []
+
+# calculate the cubes of each number using a while loop
+i = 1
+while i <= 100:
+    cube = i ** 3
+    if cube % 4 == 0 or cube % 5 == 0:
+        cubes.append(i)
+    i += 1
+
+print("Numbers whose cubes are divisible by 4 or 5 using a while loop:", cubes)
+
+
+# In[9]:
+
+
+# ans 5
+# define the input string
+string = "I want to become a data scientist"
+
+# define a variable to store the count of vowels
+vowel_count = 0
+
+# loop through each character in the string
+for char in string:
+    # check if the character is a vowel
+    if char.lower() in ['a', 'e', 'i', 'o', 'u']:
+        # if the character is a vowel, increment the count
+        vowel_count += 1
+
+# print the count of vowels in the string
+print("The number of vowels in the string is:", vowel_count)
+
+
+# In[ ]:
+
+
+
+
